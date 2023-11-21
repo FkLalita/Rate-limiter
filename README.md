@@ -18,12 +18,13 @@ This Go package provides a middleware for enforcing rate limits in your HTTP app
 
 ```bash
 go get github.com/FkLalita/Rate-limiter
-
+```
 
 ## Usage
 
 ```bash
 import "github.com/FkLalita/Rate-limiter"
+
 rl := ratelimiter.NewRateLimiter(10, 1) // capacity: 10, refill amount: 1
 router.Handle("/protected/resource", rl.Middleware(http.HandlerFunc(protectedResourceHandler)))
 
